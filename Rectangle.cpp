@@ -20,17 +20,16 @@ void Rectangle::getPost(std::ostringstream & stream) {
     stream << "/width {" << _width << " mul} def" << endl;
     stream << "/height {" << _height << " mul} def" << endl;
     stream << "/rectangle{" << endl;
+    stream << "gsave" << endl;
     stream << _startx << " inch " << _starty << " inch rmoveto" << endl;
     stream << "1 inch width 0 inch height rlineto" << endl;
     stream << "0 inch width 1 inch height rlineto" << endl;
     stream << "-1 inch width 0 inch height rlineto" << endl;
     stream << "closepath" << endl;
-    
     stream << "1 0.5 0.5 setrgbcolor" << endl;
     stream << "fill" << endl;
-    
+    stream << "grestore" << endl;
     stream << "stroke" << endl;
-    
     stream << "}def" << endl << endl;
     
     

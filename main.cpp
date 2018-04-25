@@ -25,7 +25,6 @@ void intro(ostringstream & stream) {
     stream << "% Rachel's PostScript" << endl << endl;
     stream << "/inch {72 mul} def" << endl;
     stream << "0 inch 0 inch moveto" << endl;
-    //stream << "1 inch 1 inch rmoveto" << endl;
     stream << endl;
 }
 
@@ -42,10 +41,28 @@ int main() {
     }
     intro(stream);
     
-
-    Circle s(1, 1, 1, "squid");
+    Square s(1, 1, 1, "s");
     s.getPost(stream);
-    s.stackVertical(stream, "squid", s.getHeight());
+
+    Circle p(1, 3, 3, "p");
+    p.getPost(stream);
+    
+    Triangle e(1, 4, 4, "e");
+    e.getPost(stream);
+    
+    
+    stream << "e" << endl;
+    stream << "p" << endl;
+    stream << "s" << endl;
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

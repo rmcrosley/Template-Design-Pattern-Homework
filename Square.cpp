@@ -36,19 +36,15 @@ void Square::getPost(std::ostringstream & stream) {
     stream << "/width {" << getWidth() << " mul} def" << endl;
     stream << "/height {" << getHeight() << " mul} def" << endl;
     stream << "gsave" << endl;
-    stream << "newpath" << endl;
-    stream << _startx << " inch " << _starty << " inch rmoveto" << endl;
+    stream << _startx << " inch " << _starty << " inch moveto" << endl;
     stream << "1 inch width 0 inch height rlineto" << endl;
     stream << "0 inch width 1 inch height rlineto" << endl;
     stream << "-1 inch width 0 inch height rlineto" << endl;
     stream << "closepath" << endl;
-    
     stream << "1 0.5 0.5 setrgbcolor" << endl;
     stream << "fill" << endl;
-    
-    stream << "grestore" << endl;
+    stream << "grestore" << endl; 
     stream << "stroke" << endl;
-    
     stream << "}def" << endl << endl;
     
     
